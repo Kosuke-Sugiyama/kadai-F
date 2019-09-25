@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Simple BBS</h1>
+    <form action="/" method=post>
+        Username: <input name = username type="text"><br>
+        Message: <input name = umessage type="text"><br>
+        <input type ="submit">
+    </form>
+
+{% if message %}
+    <hr>
+   {% for i in message %}
+    <li>{{i.name}}: {{i.message}}</li>
+    <hr>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>
